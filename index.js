@@ -10,15 +10,15 @@ const fs = require('fs');
 
 // array of questions for user
 const questions = [
-    "What is the title of your project",
-    "What is the description of your project",
-    "What are the installation instructions",
-    "What is the usage information",
-    "What are the contribution guidelines",
-    "What are the test instructions",
-    "What license do you want",
-    "What is your Github name",
-    "What is your Email address"
+    "What is the title of your project?",
+    "What is the description of your project?",
+    "What are the installation instructions?",
+    "What is the usage information?",
+    "What are the contribution guidelines?",
+    "What are the test instructions?",
+    "What license do you want?",
+    "What is your Github name?",
+    "What is your Email address?"
 
 ];
 
@@ -67,10 +67,10 @@ function init() {
         name: 'testInstructions',
     },
     {
-        type: 'input',
+        type: 'list',
         message: questions[6],
         name: 'License',
-        choice:[],
+        choices:["MIT","Carleton","uOttawa"],
         default: 0,
     },
     {
@@ -85,7 +85,7 @@ function init() {
     },
   ])
   .then((response) =>
-    writeToFile("README.md", response)
+    writeToFile("READMEfile.md", response)
   );
 
 
