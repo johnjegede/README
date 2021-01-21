@@ -5,7 +5,17 @@ const readme = require('./utils/generateMarkdown.js');
 const fs = require('fs');
 
 //const util = require('util');
-
+// array for licenses
+const license = [
+    "Apache License",
+    "BSD 3-Clause license",
+    "BSD 2-Clause license",
+    "GNU General Public License (GPL)",
+    "GNU Library License (LGPL)",
+    "MIT license",
+    "Mozilla Public License",
+    "Eclipse Public License"
+]
 
 
 // array of questions for user
@@ -70,7 +80,7 @@ function init() {
         type: 'list',
         message: questions[6],
         name: 'License',
-        choices:["MIT","Carleton","uOttawa"],
+        choices:license,
         default: 0,
     },
     {
